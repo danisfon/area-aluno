@@ -6,7 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Importação do CSS do Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Importação jquery -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+
+    <!-- Importar o JS do bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //alert("Tudo ok!")
+
+            $("#btn-topo").click(function (e) {
+                e.preventDefault();
+                //alert("Tudo ok!")
+
+                $("#botoes").hide();
+                $("#links").hide();
+                $("#redes").hide();
+
+                $("#topo").show(); 
+
+            });
+
+        });
+    </script>
+
     <title>Introdução ao CSS</title>
 </head>
 
@@ -45,17 +72,26 @@
 <body>
     <div class="container">
 
-
         <div class="row">
 
             <div class="col-lg-3">
-                Menu lateral
+                <h3>Menu lateral</h3>
+
+                <button class="btn btn-success d-block mt-2" id="btn-topo">
+                    botão 1
+                </button>
+
+                <button class="btn btn-success d-block mt-2" id="btn-aluno">
+                    botão 2
+                </button>
+
+                <button class="btn btn-success d-block mt-2" id="btn-online">
+                    botão 3
+                </button>
+
             </div>
 
             <div class="col-lg-9">
-
-
-
 
                 <div class="topo">
                     <a href="https://paranavai.ifpr.edu.br"> CASINHA </a> / <span>Área do Aluno</span>
@@ -77,7 +113,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div id="botoes">
 
                     <h1>Área do Aluno</h1>
                     <h4>Ano Letivo 2022</h4>
@@ -156,7 +192,7 @@
 
                     </div>
 
-                    <div>
+                    <div id="links">
 
                         <p><strong>Aluno Online</strong></p>
 
@@ -194,7 +230,7 @@
 
                     </div>
 
-                    <div>
+                    <div id="redes">
 
                         <h6>Compartilhe</h6>
 
@@ -205,9 +241,9 @@
 
                     </div>
                 </div>
-             </div> <!-- Fim do conteudo col-lg-9 -->
+            </div> <!-- Fim do conteudo col-lg-9 -->
         </div> <!--  Fim do Row -->
-    </div> <!--  Fim do Container --> 
+    </div> <!--  Fim do Container -->
 </body>
 
 </html>
